@@ -1,19 +1,20 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../store/hooks/useCart";
 import { Icons, Container, Logo, CartContainer } from "./styles";
 
 function Header() {
   const navigate = useRouter();
+  const { cart } = useCart();
+
   function handleGoToHome() {
     navigate.push("/");
   }
 
   function handleGoToCart() {
-    navigate.push("/Cart");
+    navigate.push("/MyCart");
   }
-
-  const { cart } = useCart();
+  
   const itemsCount = Object.keys( cart ).length
   return (
     <Container>
@@ -29,7 +30,6 @@ function Header() {
             </>
           :
             <Icons.cart size={"30px"} onClick={handleGoToCart} />
-
           }
 
       </CartContainer>

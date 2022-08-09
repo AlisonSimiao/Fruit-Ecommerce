@@ -33,7 +33,11 @@ export const Nutritions = styled( InformationsPrimary )`
     z-index: 10;
 `
 export const LineNutritions = styled.span`
+    text-transform: lowercase;
 
+    strong{
+        text-transform: capitalize;
+    }
 `
 
 export const Title = styled.strong`

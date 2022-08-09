@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../store/hooks/useCart";
+
 import ContainerButtonsBuyAndNutricios from "../ContainerButtonsBuyAndNutricion";
 import {
   InformationsPrimary,
@@ -65,11 +66,11 @@ function Products({
         </LineNutritions>
         <LineNutritions>
           <strong>protein: </strong>
-          {protein}
+          {protein} g
         </LineNutritions>
         <LineNutritions>
           <strong>sugar: </strong>
-          {sugar}
+          {sugar} g
         </LineNutritions>
       </Nutritions>
     </InformationsPrimary>

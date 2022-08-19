@@ -7,3 +7,4 @@ projeto desenvolvido para simular uma carrinho de compras em um shop de frutas u
  - React.js
  - Next.js
  - CSS
+ - Styled components
